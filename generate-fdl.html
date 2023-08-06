@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Infinity Dynamic Link</title>
+  </head>
+  <body>
+
+  <table height: 270px;" border="1">
+  <tbody>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">https://contents.spdigital.sg/share/</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Deeplink</td>
+  <td style="width: 10%; height: 18px;">link</td>
+  <td style="width: 80%; height: 18px;"><input style="width: 100%;" id="deeplinkField" type="text" value="https://contents.spdigital.sg/greenup"/></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Link Title</td>
+  <td style="width: 10%; height: 18px;">st</td>
+  <td style="width: 80%; height: 18px;"><input style="width: 100%;" id="linkTitleField" type="text" value="SP Utilities App Title"/></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Link Description</td>
+  <td style="width: 10%; height: 18px;">sd</td>
+  <td style="width: 80%; height: 18px;"><input style="width: 100%;" id="linkDescriptionField" type="text" value="This is the description"/></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Link Preview Image</td>
+  <td style="width: 10%; height: 18px;">si</td>
+  <td style="width: 80%; height: 18px;"><input style="width: 100%;" id="linkImageField" type="text" value="https://assets.spdigital.sg/img/infinity/banners/amazon_v1_0.png"/></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Environment</td>
+  <td style="width: 10%; height: 18px;">
+    <select name="env" id="env" onchange="onEnvChanged()">
+    <option default value="">Please select</option>
+    <option value="alpha">Alpha</option>
+    <option value="beta">Beta</option>
+    <option value="prod">Production</option>
+  </select></td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Offline Page</td>
+  <td style="width: 10%; height: 18px;">ofl</td>
+  <td style="width: 80%; height: 18px;"><input style="width: 100%;" id="oflField" type="text" value="This is the description"/><div id="oflField"></div></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 20%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">iOS metadata</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">ios store id</td>
+  <td style="width: 10%; height: 18px;">isi</td>
+  <td style="width: 80%; height: 18px;"><div id="isiField"></div></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">ios bundle id</td>
+  <td style="width: 10%; height: 18px;">ibi</td>
+  <td style="width: 80%; height: 18px;"><div id="ibiField"></div></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">ios minimum version</td>
+  <td style="width: 10%; height: 18px;">imv</td>
+  <td style="width: 80%; height: 18px;"><div id="imvField"></div></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Android metadata</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Android App id</td>
+  <td style="width: 10%; height: 18px;">apn</td>
+  <td style="width: 80%; height: 18px;"><div id="apnField"></div></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">Android min version</td>
+  <td style="width: 10%; height: 18px;">amv</td>
+  <td style="width: 80%; height: 18px;"><div id="amvField"></div></td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  <tr style="height: 18px;">
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 10%; height: 18px;">&nbsp;</td>
+  <td style="width: 80%; height: 18px;">&nbsp;</td>
+  </tr>
+  </tbody>
+  </table>
+  <p><input type="button" value="Generate Long Dynamic Link" onclick="generateLongLink()"></p>
+  <p><input id="shortenButton" type="button" value="Generate Shorten Dynamic Link" onclick="generateShortLink()"></p>
+
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+  <div id="qrcode_url"></div>
+  <div id="qrcode"></div>
+
+
+
+  </body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-functions.js"></script>
+
+
+<script type="text/javascript">
+/*
+  function callFirebase() {
+    alert("call 0")
+    // const firebase = require("firebase");
+    // Required for side-effects
+
+    alert("call 0.1")
+    
+    const FirebaseConfig = {
+      apiKey: "AIzaSyCq0YIf1fCdEWwvqZVEgU3CD1yEj57mqcQ",
+
+      authDomain: "testinfinity-298f8.firebaseapp.com",
+
+      projectId: "testinfinity-298f8",
+
+      storageBucket: "testinfinity-298f8.appspot.com",
+
+      messagingSenderId: "16721885386",
+
+      appId: "1:16721885386:web:cf0abfeba768d1233b9c33",
+
+      measurementId: "G-87DPQLXLNJ"
+
+    };
+    alert("call 1")
+    firebase.initializeApp(FirebaseConfig);
+    var functions = firebase.functions();
+alert("call 2")
+    var createDynamicLink = firebase.functions().httpsCallable('createDynamicLink');
+    createDynamicLink({ text: "sdf" })
+    .then((result) => {
+    // Read result of the Cloud Function.
+      var sanitizedMessage = result.data.text;
+      console(sanitizedMessage)
+      alert("ok")
+    })
+    .catch((error) => {
+    // Getting the Error details.
+      var code = error.code;
+      var message = error.message;
+      var details = error.details;
+      alert("code: "+code)
+    // ...
+    });
+
+  }*/
+
+
+
+
+  function showValidationErrorIfNeeded() {
+    if (document.getElementById("env").value == ""){
+      throw "'Please select environment'";
+    }
+  }
+
+  function publishLinkResult(url) {
+    document.getElementById("qrcode_url").innerHTML = url
+    document.getElementById("qrcode").innerHTML = ""
+    new QRCode(document.getElementById("qrcode"), url);
+  }
+
+  function generateLongLink() {
+    try {
+      showValidationErrorIfNeeded();
+    } catch (e) {
+      alert(e);
+      return
+    }
+    let longLink = this.createLongLink()
+    publishLinkResult(longLink)
+  }
+
+  function generateShortLink() {
+    try {
+      showValidationErrorIfNeeded();
+    } catch (e) {
+      alert(e);
+    }
+    var longLink = this.createLongLink()
+    var slashedReplacedLink = longLink.replaceAll('/', '\\/')
+    sendCurl(slashedReplacedLink);
+  }
+
+  function createLongLink() {
+    var prefix = "https://contents.spdigital.sg/share/?"
+
+    var dict = {};
+    dict["link"] = encodeURIComponent(document.getElementById('deeplinkField').value);
+    dict["st"] = encodeURIComponent(document.getElementById('linkTitleField').value);
+    dict["sd"] = encodeURIComponent(document.getElementById('linkDescriptionField').value);
+    dict["si"] = encodeURIComponent(document.getElementById('linkImageField').value);
+    dict["ofl"] = encodeURIComponent(document.getElementById('oflField').value);
+    dict["isi"] = encodeURIComponent(document.getElementById('isiField').value);
+    dict["ibi"] = encodeURIComponent(document.getElementById('ibiField').value);
+    dict["imv"] = encodeURIComponent(document.getElementById('imvField').value);
+    dict["apn"] = encodeURIComponent(document.getElementById('apnField').value);
+    dict["amv"] = encodeURIComponent(document.getElementById('amvField').value);
+
+    var final = prefix
+    for(var key in dict) {
+      var value = dict[key];
+      final+= "&"+key+"="+value
+    }
+    return final
+  }
+
+
+  function onEnvChanged() {
+    env = document.getElementById("env").value
+    switch (env) {
+    case "alpha":
+      envMetaData = alphaMetadata
+      break
+    case "beta":
+      envMetaData = betaMetadata
+      break
+    case "prod":
+      envMetaData = prodMetadata
+      break
+    default:
+      envMetaData = emptyMetadata
+      break
+    }
+    document.getElementById("oflField").value = envMetaData.ofl
+    document.getElementById("ibiField").innerHTML = envMetaData.ibi
+    document.getElementById("isiField").innerHTML = envMetaData.isi
+    document.getElementById("imvField").innerHTML = envMetaData.imv
+    document.getElementById("apnField").innerHTML = envMetaData.apn
+    document.getElementById("amvField").innerHTML = envMetaData.amv
+  }
+
+  function sendCurl(slashedReplacedLink) {
+
+    var data = JSON.stringify({
+      "link": document.getElementById('deeplinkField').value,
+      "st": document.getElementById('linkTitleField').value,
+      "sd": document.getElementById('linkDescriptionField').value,
+      "si": document.getElementById('linkImageField').value,
+      "ofl": document.getElementById('oflField').value
+    });
+
+    var xhr = new XMLHttpRequest();
+    //xhr.withCredentials = true;
+    xhr.responseType = 'json';
+
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === 4) {
+        //alert(this.responseText)
+        var jsonResponse = xhr.response;
+        console.log(jsonResponse.dynamic_shortened_link);
+        publishLinkResult(jsonResponse.dynamic_shortened_link)
+      }
+    });
+
+    const fcfURL = "https://us-central1-testinfinity-298f8.cloudfunctions.net/createDynamicLink"
+    const gcfURL = "https://us-central1-testproject-144903.cloudfunctions.net/create-infinity-dynamic-link"
+    xhr.open("POST", fcfURL+"?env="+document.getElementById("env").value);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(data);
+  }
+
+  const alphaMetadata = {
+    "ofl": "https://www.spdigital.sg/",
+    "isi": "596749130",
+    "ibi": "sg.com.singaporepower.infinity-alpha",
+    "imv": "13.0.0",
+    "apn": "sg.com.singaporepower.spservices.debug",
+    "amv": "608060000"
+  }
+
+  const betaMetadata = {
+    "ofl": "https://www.spdigital.sg/",
+    "isi": "596749130",
+    "ibi": "sg.com.singaporepower.infinity-beta",
+    "imv": "13.0.0",
+    "apn": "sg.com.singaporepower.spservices.debug",
+    "amv": "608060000"
+  }
+
+  const prodMetadata = {
+    "ofl": "https://www.spdigital.sg/",
+    "isi": "596749130",
+    "ibi": "sg.com.singaporepower.spsccm",
+    "imv": "13.0.0",
+    "apn": "sg.com.singaporepower.spservices",
+    "amv": "608060000"
+  }
+
+  const emptyMetadata = {
+    "ofl": "",
+    "isi": "",
+    "ibi": "",
+    "imv": "",
+    "apn": "",
+    "amv": ""
+  }
+
+  </script>

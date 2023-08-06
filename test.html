@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Educational registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+        min-height: 100%;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 0 10px;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+        text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #aaa;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .formlabel {
+        color: #eee;
+        margin-bottom: 30px;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>Register to our courses</h1>
+        <p>W3docs provides free learning materials for programming languages like HTML, CSS, Java Script, PHP etc.</p>
+      </div>
+      <form action="/">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Register here</h2>
+        </div>
+        <div class="info">
+          <table width="100%">
+            <tr>
+              <td width="150">
+                <label class="formlabel">Link Domain</label>
+              </td>
+              <td width="50">
+              </td>
+              <td>
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="linkdomain" placeholder="Link Domain">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="150">
+                <label class="formlabel">Deeplink</label>
+              </td>
+              <td width="50">
+                (link)
+              </td>
+              <td>
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="link" placeholder="https://zzz.yyy/xxx">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="150">
+                <label class="formlabel">Link Title</label>
+              </td>
+              <td width="50">
+                <label class="formlabel">(st)</label>
+              </td>
+              <td>
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="st" placeholder="Title of dynamic link">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="150">
+                <label class="formlabel">Link Description</label>
+              </td>
+              <td width="50">
+                <label class="formlabel">(sd)</label>
+              </td>
+              <td>
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="sd" placeholder="Description of dynamic link">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="150">
+                <label class="formlabel">Link Preview Image</label>
+              </td>
+              <td width="50">
+                <label class="formlabel">(si)</label>
+              </td>
+              <td>
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="si" placeholder="https://zzz.yyy/preview.png">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td width="150">
+                <label class="formlabel">Offline Page</label>
+              </td>
+              <td width="50">
+                <label class="formlabel">(ofl)</label>
+              </td>
+              <td>
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="ofl" placeholder="https://zzz.yyy/desktop.html">
+                </div>
+              </td>
+            </tr>
+          </table>
+          <table bgcolor="#333">
+            <tr>
+              <td width="150" bgcolor="#333">
+                <label class="formlabel">iOS store id</label>
+              </td>
+              <td width="30" bgcolor="#333">
+                <label class="formlabel">(isi)</label>
+              </td>
+              <td width="70" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80" bgcolor="#333">
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="isi" placeholder="#######">
+                </div>
+              </td>
+              <td width="100" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="150" bgcolor="#333">
+                <label class="formlabel">Android App id</label>
+              </td>
+              <td width="30" bgcolor="#333">
+                <label class="formlabel">(apn)</label>
+              </td>
+              <td width="70" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80" bgcolor="#333">
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="apn" placeholder="#######">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="150" bgcolor="#333">
+                <label class="formlabel">iOS bundle id</label>
+              </td>
+              <td width="30" bgcolor="#333">
+                <label class="formlabel">(ibi)</label>
+              </td>
+              <td width="70" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80" bgcolor="#333">
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="ibi" placeholder="org.myapp">
+                </div>
+              </td>
+              <td width="100" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="150" bgcolor="#333">
+                <label class="formlabel">Android min version</label>
+              </td>
+              <td width="30" bgcolor="#333">
+                <label class="formlabel">(amv)</label>
+              </td>
+              <td width="70" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80" bgcolor="#333">
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="amv" placeholder="#######">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="150" bgcolor="#333">
+                <label class="formlabel">iOS min version</label>
+              </td>
+              <td width="30" bgcolor="#333">
+                <label class="formlabel">(imv)</label>
+              </td>
+              <td width="70" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80" bgcolor="#333">
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="imv" placeholder="#.#.#">
+                </div>
+              </td>
+              <td width="100" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="150" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="30" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="70" bgcolor="#333">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80" bgcolor="#333">
+              </td>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <td width="150">
+                <label class="formlabel">Campaign Source</label>
+              </td>
+              <td width="30">
+                <label class="formlabel">(utm_source)</label>
+              </td>
+              <td width="70">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80">
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="utm_source" placeholder="Example: Google">
+                </div>
+              </td>
+              <td width="100">
+                <label class="formlabel"></label>
+              </td>
+              <td width="150">
+                <label class="formlabel">Campaign Medium</label>
+              </td>
+              <td width="30">
+                <label class="formlabel">(utm_medium)</label>
+              </td>
+              <td width="70">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80">
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="utm_medium" placeholder="Example: cpc">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td width="150">
+                <label class="formlabel">Campaign Name</label>
+              </td>
+              <td width="30">
+                <label class="formlabel">(utm_campaign)</label>
+              </td>
+              <td width="70">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80">
+                <div class="info">
+                  <input width="100%" class="fname" type="text" name="utm_campaign" placeholder="Example: Spring Sale">
+                </div>
+              </td>
+              <td width="100">
+                <label class="formlabel"></label>
+              </td>
+              <td width="150">
+                <label class="formlabel"></label>
+              </td>
+              <td width="30">
+                <label class="formlabel"></label>
+              </td>
+              <td width="70">
+                <label class="formlabel"></label>
+              </td>
+              <td width="80">
+              </td>
+            </tr>
+          </table>
+        <button type="submit" href="/">Submit</button>
+      </form>
+
+    </div>
+  </body>
+</html>
